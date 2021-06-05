@@ -39,13 +39,13 @@ function gradeQuiz(candidateAnswers) {
 
 
   grade = score / questions.length * 100;
-  console.log(`>>> Overall Grade: ${grade}% (${score} of ${questions.length} responses correct) <<<`);
-  if (score === questions.length){
-    console.log(`>>> Status: PASSED <<<`);
-  }
-  else {
-    console.log(`>>> Status: FAILED <<<`);
-  }
+  // console.log(`>>> Overall Grade: ${grade}% (${score} of ${questions.length} responses correct) <<<`);
+  // if (score === questions.length){
+  //   console.log(`>>> Status: PASSED <<<`);
+  // }
+  // else {
+  //   console.log(`>>> Status: FAILED <<<`);
+  // }
   
   return grade;
 }
@@ -55,7 +55,7 @@ function runProgram() {
   // TODO 1.1c: Ask for candidate's name //
   askQuestion();
   gradeQuiz(this.candidateAnswers);
-  
+  console.log(gradeQuiz(this.candidateAnswers));
 }
 
 // Don't write any code below this line //
