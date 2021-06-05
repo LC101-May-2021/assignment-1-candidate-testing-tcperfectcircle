@@ -12,7 +12,7 @@ let questions = ['True or false: 5000 meters = 5 kilometers: ', '(5 + 3)/2 * 10 
 let correctAnswers = ['True', '40', 'Trajectory', 'Sally Ride', '3'];
 let candidateAnswers = [];
 let score = 0;
-
+let grade = 0;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -38,13 +38,13 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
 
-  let grade = score / questions.length * 100;
+  grade = score / questions.length * 100;
   console.log(`>>> Overall Grade: ${grade}% (${score} of ${questions.length} responses correct) <<<`);
   if (score === questions.length){
-    console.log(`>>> Status: PASSED <<<`)
+    console.log(`>>> Status: PASSED <<<`);
   }
   else {
-    console.log(`>>> Status: FAILED <<<`)
+    console.log(`>>> Status: FAILED <<<`);
   }
   
   return grade;
@@ -55,7 +55,6 @@ function runProgram() {
   // TODO 1.1c: Ask for candidate's name //
   askQuestion();
   gradeQuiz(this.candidateAnswers);
-  
   
 }
 
