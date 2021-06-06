@@ -8,7 +8,7 @@ let candidateName = "";
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = "";
-let questions = ['True or false: 5000 meters = 5 kilometers: ', '(5 + 3)/2 * 10 = ?: ', 'Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2?: ', 'Who was the first American woman in space?: ', 'What is the minimum crew size for the International Space Station (ISS)?: '];
+let questions = [ 'True or false: 5000 meters = 5 kilometers: ', '(5 + 3)/2 * 10 = ?: ', 'Given the array [8, "Orbit", "Trajectory", 45], what entry is at index 2?: ', 'Who was the first American woman in space?: ', 'What is the minimum crew size for the International Space Station (ISS)?: ' ];
 let correctAnswers = ['True', '40', 'Trajectory', 'Sally Ride', '3'];
 let candidateAnswers = [];
 let score = 0;
@@ -39,13 +39,13 @@ function gradeQuiz(candidateAnswers) {
 
 
   grade = score / questions.length * 100;
-  // console.log(`>>> Overall Grade: ${grade}% (${score} of ${questions.length} responses correct) <<<`);
-  // if (score === questions.length){
-  //   console.log(`>>> Status: PASSED <<<`);
-  // }
-  // else {
-  //   console.log(`>>> Status: FAILED <<<`);
-  // }
+  console.log(`>>> Overall Grade: ${grade}% (${score} of ${questions.length} responses correct) <<<`);
+  if (score === questions.length){
+    console.log(`>>> Status: PASSED <<<`);
+  }
+  else {
+    console.log(`>>> Status: FAILED <<<`);
+  }
   
   return grade;
 }
@@ -55,7 +55,6 @@ function runProgram() {
   // TODO 1.1c: Ask for candidate's name //
   askQuestion();
   gradeQuiz(this.candidateAnswers);
-  console.log(gradeQuiz(this.candidateAnswers));
 }
 
 // Don't write any code below this line //
